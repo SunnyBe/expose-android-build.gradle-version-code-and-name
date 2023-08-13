@@ -58,7 +58,7 @@ async function main(): Promise<void> {
         setEnvironmentVariable('ANDROID_VERSION_CODE', code);
         core.info(`Exposing ANDROID_VERSION_CODE with this value: ${code}.`);
       } else {
-        failWithMessage('Version code could not be found in the file');
+        failWithMessage(`Version code could not be found in the file: ${buildGradlePath}`);
 
       }
     }
@@ -69,7 +69,7 @@ async function main(): Promise<void> {
         setEnvironmentVariable('ANDROID_VERSION_NAME', name);
         core.info(`Exposing ANDROID_VERSION_NAME with this value: ${name}.`);
       } else {
-        failWithMessage('Version name could not be found in the file');
+        failWithMessage(`Version name could not be found in the file: ${buildGradlePath}`);
       }
     }
 
